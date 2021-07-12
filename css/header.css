@@ -1,0 +1,219 @@
+.header-section{
+    height: 100vh;
+    background:var(--bg-black);
+    color: var(--color-white);
+    position: relative;
+    background: none;
+    overflow: hidden ;
+    z-index: 150;
+}
+
+
+.header-section video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.header-logo h1{
+    margin: 1rem;
+    font-size: clamp(1.5rem,2.5vw,2.5rem);
+}
+
+.header-logo:hover,
+.header-logo:focus{
+    transform: scale(1.01,1.01);
+}
+
+
+.header-logo h1 span{
+    color: var(--color-pink);
+} 
+
+
+/* HamBurger and NavBar */
+.burger{
+    margin:1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.burger-menu{
+    width: 35px;
+    height: 3px;
+    background: white;
+    margin: 0.1rem 0.2rem 0.5rem 0.2rem;
+}
+
+nav ul{
+    transform: scale(0,0);
+    background-color: var(--color-grey);
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 25;
+    
+    transform-origin: top right;
+    transition:transform 0.3s linear;
+
+
+
+}
+
+nav ul.active{
+    transform: scale(1,1);
+    /* transform-origin: top right;
+    transition:transform 0.3s ease-in; */
+
+}
+
+nav li{
+    opacity: 0;
+    margin: 1rem;
+    padding: 1rem;
+    font-weight:600;
+    transition: opacity 0.3s ease-in-out 0.4s;
+}
+
+nav li.active1{
+    opacity: 1;
+}
+
+nav li a{
+    font-size: clamp(1rem,1.2vw,1.4rem);
+    font-weight: 500;
+    padding: 0rem clamp(1rem,2vw,2rem);
+    margin: 0  clamp(1rem,1vw,1.5rem);
+    color: #FFFAFA;
+    
+}
+
+nav a:hover{
+    color: var(--color-red);
+}
+
+
+
+/* For Header Content */
+.header-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+.header-content h1,
+.typed-text{
+    line-height: 1.5;
+    font-size:clamp(2rem,4vw,6rem);
+}
+
+.header-content p{
+    text-align: center;
+    font-size:clamp(0.9rem,1.2vw,1.3rem);
+    color: var(--color-white);
+
+    
+}
+
+
+/* For type writing Effect */
+
+.typed-text{
+    font-weight:bolder;
+    color: var(--color-red);
+    
+    
+  }
+  
+  .cursor{
+    display:inline-block;
+    width:2.5px;
+    background-color: #ccc;
+    margin-left:0.1rem;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink{
+    0% { background-color: #ccc;}
+    49% { background-color: #ccc;}
+    50% { background-color: transparent;}
+    99% { background-color: #ccc;}
+    100% { background-color: #ccc;}
+  }
+  
+  .cursor.typing{
+    animation:none;
+  }
+  
+
+
+
+@media screen and (min-width:770px){
+    .burger{
+        display: none;
+    }
+
+  
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        color: var(--color-white);
+    }
+    
+    
+    
+    
+    nav ul{
+        all: unset;
+        display: flex;
+        margin-left: auto;
+        margin-right: 1rem;
+
+    }
+
+    nav li{
+        all: unset;
+    }
+    
+    
+    nav li a{
+        font-size: clamp(1rem,1.2vw,1.4rem);
+        font-weight: 500;
+        padding: 0rem clamp(1rem,2vw,2rem);
+        margin: 0  clamp(1rem,1vw,1.5rem);
+        color: #FFFAFA;
+    }
+    
+    nav a:hover{
+        color: var(--color-red);
+    }
+
+    /* .header-logo{
+        font-size: clamp(1.5rem,2.5vw,2.5rem);
+    } */
+
+    
+    
+    
+    
+    
+    
+
+
+
+}

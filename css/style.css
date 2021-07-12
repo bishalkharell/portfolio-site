@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --bg-black: #1A1A1D;
+    --color-grey: rgba(31,31,31,1);
+    --color-pink: #950740;
+    --color-red: #C3073F;
+    --color-brown: #6F2232;
+    --color-white: #FFFAFA;
+}
+
+
+
+h1{
+    font-family: 'Lato',sans-serif;
+    color: var(--color-white);
+    font-size: clamp(1.5rem,2.5vw,2.5rem);
+    font-weight: 600;
+
+}
+
+
+h2{
+    font-family: 'Lato',sans-serif;
+    color: var(--color-white);
+    font-size: clamp(1.3rem,2.2vw,2.2rem);
+    font-weight: 600;
+
+}
+h3{
+    font-family: 'Lato',sans-serif;
+    color: var(--color-white);
+    font-size: clamp(1.1rem,2vw,2rem);
+    font-weight: 600;
+
+}
+
+
+
+p,a{
+    font-size: clamp(0.9rem,1vw,1.1rem);
+    font-family: 'helvetica',sans-serif,Tahoma,Georgia;
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+}
+
+.container{
+    margin: 2rem 6rem;
+    padding: 1rem;
+}
+
+
+
+.btn{
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--bg-black);
+    background: var(--color-white);
+    box-shadow:3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform: scale(1,1);
+    transition: 0.3s ease-in,border-radius 0.5s ease-in;
+
+}
+
+.btn-black{
+    background:var(--bg-black);
+    color: var(--color-white);
+}
+
+.btn-black:hover,
+.btn-black:focus{
+    background: var(--color-brown) !important;
+}
+
+.btn:hover,
+.btn:focus{
+    box-shadow:4px 4px 4px 3px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05,1.05);
+    background: var(--bg-black);
+    color: var(--color-white);
+    border-radius: 20px;
+}
+
+.north-icons{
+    padding: 0.2rem;
+    margin: 0.2rem;
+    background-color: rgba(154, 18, 179, 0.8);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 5;
+    bottom: 15;
+    z-index: 130;
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.north-icons:hover{
+    background-color: rgba(154, 18, 179, 1);
+    transform: scale(1.05,1.05);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+
+@media(max-width:770px){
+    .material-icons{
+        width: 35px;
+        height: 35px;
+        right: 2;
+        bottom: 15;
+    }
+}
