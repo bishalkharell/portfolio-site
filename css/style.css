@@ -5,9 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body{
     overflow-x: hidden;
 }
 
@@ -128,7 +125,7 @@ li{
     .material-icons{
         width: 35px;
         height: 35px;
-        right: 2;
+        right: 10;
         bottom: 15;
     }
 }

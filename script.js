@@ -19,7 +19,7 @@ burger.addEventListener('click', ()=> {
 
 const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -200px 0px"
+    rootMargin: "0px 0px -25% 0px"
 }
 
 const appearOnScroll = new IntersectionObserver( 
@@ -56,9 +56,6 @@ const newTextDelay = 2000;
 let textArrayIndex = 0;
 let charIndex = 0;
 
-
-console.log(textArray[textArrayIndex])
-
 function type(){
  if(charIndex < textArray[textArrayIndex].length){
    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
@@ -87,7 +84,7 @@ function erase(){
   }
 }
 
-window.addEventListener("load",function(){
+document.addEventListener("DOMContentLoaded",function(){
   if(textArray.length)  type(type, newTextDelay + 250);
 })
 
@@ -95,15 +92,3 @@ window.addEventListener("load",function(){
 function formError(){
     const sorryForm = document.querySelector(".contact-form form p").style.display="block";
 }
-
-// Readme transition effect
-
-const readMe = document.querySelector(".readme button");
-const readMeSpan = document.querySelector(".readme span");
-
-
-
-readMe.addEventListener("mouseenter", () =>{
-  // readMeSpan.style.transform="rotate(360deg)";
-  console.log("Mouse has entered")
-});
