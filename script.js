@@ -50,8 +50,8 @@ sliders.forEach(slider => {
 const cursorSpan = document.querySelector('.cursor')
 const typedTextSpan = document.querySelector('.typed-text')
 const textArray = ["Bishal","a Student","a Developer"];
-const typingDelay = 200;
-const erasingDelay = 100;
+const typingDelay = 150;
+const erasingDelay = 200;
 const newTextDelay = 2000;
 let textArrayIndex = 0;
 let charIndex = 0;
@@ -80,12 +80,12 @@ function erase(){
     cursorSpan.classList.add("typing");
     textArrayIndex++;
     if(textArrayIndex >= textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100)
+    setTimeout(type, typingDelay + 500)
   }
 }
 
 document.addEventListener("DOMContentLoaded",function(){
-  if(textArray.length)  type(type, newTextDelay + 250);
+  if(textArray.length)  type(type, newTextDelay);
 })
 
 // Form Error

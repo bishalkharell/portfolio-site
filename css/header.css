@@ -3,17 +3,9 @@
     background:var(--bg-black);
     color: var(--color-white);
     position: relative;
-    background: none;
+    background: var(--bg-black);
     overflow: hidden ;
     z-index: 150;
-}
-
-
-.header-section video{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
 }
 
 
@@ -120,7 +112,6 @@ nav a:hover{
 
 .header-content h1,
 .typed-text{
-    line-height: 1.5;
     font-size:clamp(2rem,4vw,6rem);
 }
 
@@ -140,37 +131,61 @@ nav a:hover{
     color: var(--color-red);
     
     
-  }
+}
   
-  .cursor{
-    display:inline-block;
-    width:2.5px;
-    background-color: #ccc;
-    margin-left:0.1rem;
-    animation: blink 1s infinite;
-  }
-  
-  @keyframes blink{
-    0% { background-color: #ccc;}
-    49% { background-color: #ccc;}
-    50% { background-color: transparent;}
-    99% { background-color: #ccc;}
-    100% { background-color: #ccc;}
-  }
-  
-  .cursor.typing{
-    animation:none;
-  }
+.cursor{
+display:inline-block;
+width:2.5px;
+background-color: #ccc;
+margin-left:0.3rem;
+animation: blink 1s infinite;
+}
+
+@keyframes blink{
+0% { background-color: #ccc;}
+49% { background-color: #ccc;}
+50% { background-color: transparent;}
+99% { background-color: #ccc;}
+100% { background-color: #ccc;}
+}
+
+.cursor.typing{
+animation:none;
+}
+
+.header-profile{
+    display: none;
+}
+
+
+
+
   
 
 
 
-@media screen and (min-width:770px){
+@media screen and (min-width:800px){
     .burger{
         display: none;
     }
 
-  
+    .header-content{
+        display: flex;
+    }
+
+    .header-info{
+        flex: 50%;
+    }
+
+    .header-profile{
+        display: block;
+        flex: 50%;
+        overflow: hidden;
+    }
+
+
+
+
 
     nav{
         display: flex;
@@ -193,6 +208,7 @@ nav a:hover{
 
     nav li{
         all: unset;
+        margin: 0 1rem;
     }
     
     

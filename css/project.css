@@ -147,16 +147,21 @@
     align-items: center;
 }
 
-.basis-part video{
+.basis-part iframe{
+    max-width: 100%;
     height: 50%;
 }
-.basis-part iframe{
-    height: 50%;
+
+.basis-part img{
+    max-width: 100%;
+    height: 200px;
+
+    
 }
 
 .basis-h3{
     display: block;
-    padding: 3rem;
+    margin: 2rem;
 }
 
 
@@ -201,14 +206,6 @@
     display: block;
 }
 
-
-.basis-part video{
-    max-width: 100%;
-}
-
-.basis-part iframe{
-    max-width: 100%;
-}
 
 /*  for faders */
 
@@ -336,7 +333,7 @@
         grid-template-columns: repeat(auto-fit,minmax(250px ,300px));
         gap: 1rem;
       
-        margin: 2rem 6rem;
+        margin: 3rem 6rem;
     }
 
     .project-description.pd2::before{
