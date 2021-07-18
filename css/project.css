@@ -295,11 +295,7 @@
         transform: skew(10deg);
         z-index: 50;
     }
-    
-    .slide-in > * {
-        margin: 1rem;
-        padding: 1rem;
-    }
+
     
     
     .p3{
