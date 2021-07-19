@@ -112,10 +112,12 @@ nav a:hover{
 
 .header-content h1,
 .typed-text{
+    line-height: 1.5;
     font-size:clamp(2rem,4vw,6rem);
 }
 
 .header-content p{
+    line-height: 1.2;
     text-align: center;
     font-size:clamp(0.9rem,1.2vw,1.3rem);
     color: var(--color-white);
@@ -208,7 +210,7 @@ animation:none;
 
     nav li{
         all: unset;
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
     
     
