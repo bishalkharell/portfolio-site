@@ -44,51 +44,14 @@ sliders.forEach(slider => {
 })
 
 
-//  For Typing Effect
-
-
-const cursorSpan = document.querySelector('.cursor')
-const typedTextSpan = document.querySelector('.typed-text')
-const textArray = ["Bishal","a Student","a Developer"];
-const typingDelay = 150;
-const erasingDelay = 200;
-const newTextDelay = 2000;
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type(){
- if(charIndex < textArray[textArrayIndex].length){
-   if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type,typingDelay);
-  }else{
-    cursorSpan.classList.remove("typing");
-     setTimeout(erase, newTextDelay);
-    
-  }
-}
-
-
-function erase(){
-  if(charIndex > 0){
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent =  textArray[textArrayIndex].substring(0,charIndex-1);
-    charIndex--;
-    setTimeout(erase,erasingDelay);
-  }else{
-    cursorSpan.classList.add("typing");
-    textArrayIndex++;
-    if(textArrayIndex >= textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 500)
-  }
-}
-
-document.addEventListener("DOMContentLoaded",function(){
-  if(textArray.length)  type(type, newTextDelay);
-})
 
 // Form Error
-function formError(){
-    const sorryForm = document.querySelector(".contact-form form p").style.display="block";
-}
+
+let contactForm = document.getElementById('contactForm')
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log("form submit")
+  let sorryForm = document.getElementById('sorry-form')
+  sorryForm.innerText = "Sorry Currently Contact Form is not Available. Please Contact through other medium."
+
+});

@@ -87,10 +87,6 @@ textarea:focus{
     transform:scale(1.2,1.2);
 }
 
-.contact-form form p{
-    display: none;
-}
-
 .footer{
     color: white;
 }
